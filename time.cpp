@@ -2,6 +2,9 @@
 #include <cmath>
 #include <compare>
 
+enum class Scale {UTC = 0, UT1 = 1};
+template<Scale scale>
+
 class Time {
     double jdInt_;
     double jdFrac_;
@@ -38,18 +41,22 @@ public :
     auto operator<=>(const Time& other) const noexcept = default;
 
 };
-
-double operator-(const Time& first, const Time& second) noexcept{
+template<Scale s>
+double operator-(const Time<s>& first, const Time<s>& second) noexcept{
     return (first.jdInt() - second.jdInt()) + (first.jdPart() - second.jdPart()); 
 };
-Time operator-(const Time& time, double secs) noexcept{
-    return Time::fromJD(time.jd() - secs/86400);
+template<Scale s>
+Time<s> operator-(const Time<s>& time, double secs) noexcept{
+    return Time<s>::fromJD(time.jd() - secs/86400);
 };
-Time operator+(const Time& time, double secs) noexcept{
-    return Time::fromJD(time.jd() + secs/86400);
+template<Scale s>
+Time<s> operator+(const Time<s>& time, double secs) noexcept{
+    return Time<s>::fromJD(time.jd() + secs/86400);
 };
 
 int main()
 {
+    Time<Scale::UTC> first(0, 0);
+    Time<Scale::UT1> second(0, 0);
     return 0;
 }
