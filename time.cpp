@@ -2,6 +2,8 @@
 #include <cmath>
 #include <compare>
 
+#include "sofa.h"
+
 enum class Scale {UTC = 0, UT1 = 1};
 template<Scale scale>
 
@@ -56,7 +58,5 @@ Time<s> operator+(const Time<s>& time, double secs) noexcept{
 
 int main()
 {
-    Time<Scale::UTC> first(0, 0);
-    Time<Scale::UT1> second(0, 0);
     return 0;
 }

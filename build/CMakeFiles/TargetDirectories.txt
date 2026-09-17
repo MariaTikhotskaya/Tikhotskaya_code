@@ -1,0 +1,6 @@
+/home/mariatikhotskaya/proga/build/CMakeFiles/rebuild_cache.dir
+/home/mariatikhotskaya/proga/build/CMakeFiles/edit_cache.dir
+/home/mariatikhotskaya/proga/build/CMakeFiles/time_project.dir
+/home/mariatikhotskaya/proga/build/lib/sofa/20231011/c/CMakeFiles/rebuild_cache.dir
+/home/mariatikhotskaya/proga/build/lib/sofa/20231011/c/CMakeFiles/edit_cache.dir
+/home/mariatikhotskaya/proga/build/lib/sofa/20231011/c/CMakeFiles/sofa.dir

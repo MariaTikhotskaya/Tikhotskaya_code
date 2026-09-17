@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/sofa/20231011/c/src/sofa.h
+math.h
+../lib/sofa/20231011/c/src/math.h
+
+/home/mariatikhotskaya/proga/time.cpp
+iostream
+-
+cmath
+-
+compare
+-
+sofa.h
+/home/mariatikhotskaya/proga/sofa.h
+
